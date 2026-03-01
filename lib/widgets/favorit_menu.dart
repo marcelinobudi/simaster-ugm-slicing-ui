@@ -11,11 +11,11 @@ class FavoritMenu extends StatelessWidget {
       children: [
         Text('Menu Favorit'),
         GridView.count(
-          crossAxisCount: 4, 
+          crossAxisCount: 5,
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          children: items.map((i) => Text(i)).toList(),
-        )
+          children: items.map((i) => Text(1.toString())).toList(),
+        ),
       ],
     );
   }

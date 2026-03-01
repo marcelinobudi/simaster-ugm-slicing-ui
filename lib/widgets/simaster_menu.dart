@@ -15,9 +15,13 @@ class SimasterMenu extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           NavBar(),
+          SizedBox(height: 12),
           Achievement(),
+          SizedBox(height: 12),
           SimasterNewsListView(),
+          SizedBox(height: 12),
           FavoritMenu(),
+          SizedBox(height: 12),
           YourSchedule(),
         ],
       ),
