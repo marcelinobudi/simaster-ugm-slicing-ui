@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:learning_1/data/favorit_menu.dart';
 import 'package:learning_1/widgets/item_favorit_menu.dart';
 
 class FavoritMenu extends StatelessWidget {
-  FavoritMenu({super.key});
-  final items = List.generate(8, (i) => 'Item ${i}');
+  const FavoritMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,8 @@ class FavoritMenu extends StatelessWidget {
           crossAxisCount: 4,
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          children: items.map((i) {
-            return ItemFavoritMenu(title: title, icon: icon)
+          children: favoritMenu.map((item) {
+            return ItemFavoritMenu(title: item.title, icon: item.icon);
           }).toList(),
         ),
       ],

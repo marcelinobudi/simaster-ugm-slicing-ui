@@ -8,7 +8,25 @@ class ItemFavoritMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Image.asset(icon), Text(title)],
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        IconButton.filled(
+          onPressed: () {},
+          style: IconButton.styleFrom(
+            backgroundColor: Colors.transparent,
+          ),
+          icon: Image.asset(
+            icon,
+            width: 40,
+            height: 40,
+          ),
+        ),
+
+        SizedBox(
+          height: 8,
+        ),
+        Text(title),
+      ],
     );
   }
 }

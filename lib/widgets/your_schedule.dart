@@ -6,10 +6,8 @@ class YourSchedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Jadwal Anda')
-      ],
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [Text('Jadwal Anda')],
     );
   }
 }
