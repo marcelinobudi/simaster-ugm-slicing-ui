@@ -9,19 +9,26 @@ class YourSchedule extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Jadwal Anda'),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Image.asset(
-              'assets/images/your_schedule_empty.jpeg',
-              width: 200,
-              height: 200,
-            ),
-            Text(
-              'Jadwal hari ini kosong, mari kita\nmaksimalkan waktu yang ada...',
-              textAlign: TextAlign.center,
-            ),
-          ],
+        Container(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/your_schedule_empty.jpeg',
+                width: 200,
+                height: 200,
+              ),
+              Text(
+                'Jadwal hari ini kosong, mari kita\nmaksimalkan waktu yang ada...',
+                textAlign: TextAlign.center,
+              ),
+              FilledButton(
+                onPressed: () {},
+                child: Text('Lihat Semua'),
+              ),
+            ],
+          ),
         ),
       ],
     );

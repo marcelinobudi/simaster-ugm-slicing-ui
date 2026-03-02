@@ -9,16 +9,6 @@ class Achievement extends StatelessWidget {
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.grey.withValues(
-        //       alpha: 0.1,
-        //     ), // Shadow color with opacity
-        //     offset: Offset(0, 4), // X, Y offset
-        //     blurRadius: 3, // Blur effect
-        //     spreadRadius: 2, // Spread of the shadow
-        //   ),
-        // ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,18 +20,33 @@ class Achievement extends StatelessWidget {
             ],
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('IPK'),
+
               Row(
-                children: [Text('0.00'), Icon(Icons.remove_red_eye)],
+                children: [
+                  Text('0.00'),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Icon(Icons.remove_red_eye),
+                ],
               ),
             ],
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('IPS'),
               Row(
-                children: [Text('0.00'), Icon(Icons.remove_red_eye)],
+                children: [
+                  Text('0.00'),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Icon(Icons.remove_red_eye),
+                ],
               ),
             ],
           ),
