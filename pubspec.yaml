@@ -67,6 +67,7 @@ flutter:
     - assets/images/item_icon/scholarship.png
     - assets/images/item_icon/simaster_app.png
     - assets/images/item_icon/study.png
+    - assets/images/your_schedule_empty.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
