@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_1/widgets/item_favorit_menu.dart';
 
 class FavoritMenu extends StatelessWidget {
   FavoritMenu({super.key});
@@ -11,10 +12,12 @@ class FavoritMenu extends StatelessWidget {
       children: [
         Text('Menu Favorit'),
         GridView.count(
-          crossAxisCount: 5,
+          crossAxisCount: 4,
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          children: items.map((i) => Text(1.toString())).toList(),
+          children: items.map((i) {
+            return ItemFavoritMenu(title: title, icon: icon)
+          }).toList(),
         ),
       ],
     );

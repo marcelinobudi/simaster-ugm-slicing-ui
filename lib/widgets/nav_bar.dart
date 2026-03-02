@@ -8,7 +8,7 @@ class NavBar extends StatelessWidget {
     return Row(
       children: [
         CircleAvatar(
-          radius: 24.0,
+          radius: 23.0,
           backgroundColor: Colors.grey,
         ),
         SizedBox(
@@ -24,7 +24,7 @@ class NavBar extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.arrow_drop_down),
+              icon: Icon(Icons.arrow_drop_down_outlined),
             ),
             IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
           ],

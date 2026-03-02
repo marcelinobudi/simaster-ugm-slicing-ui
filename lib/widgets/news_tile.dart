@@ -7,10 +7,10 @@ class NewsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 320,
-      height: 400,
+      width: 380,
+      height: 80,
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: const Color.fromARGB(255, 245, 211, 61),
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       child: Center(

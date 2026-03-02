@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               label: 'fingerprint',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.verified_user),
+              icon: Icon(Icons.account_circle),
               label: 'profil',
             ),
           ],
