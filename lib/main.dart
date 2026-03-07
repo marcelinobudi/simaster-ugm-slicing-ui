@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:learning_1/widgets/simaster_menu.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:learning_1/router/go_router.dart';
+import 'package:learning_1/screens/simaster_menu.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -10,25 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.fingerprint),
-              label: 'fingerprint',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: 'profil',
-            ),
-          ],
-        ),
-        body: SafeArea(
-          child: SimasterMenu(),
-        ),
-      ),
+    return MaterialApp.router(
+      routerConfig: goRouter,
     );
   }
 }

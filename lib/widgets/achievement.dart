@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learning_1/provider/provider.dart';
 
-class Achievement extends StatelessWidget {
+class Achievement extends ConsumerWidget {
   const Achievement({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final String ipk = ref.read(ipkProvider.notifier).ipk;
+    final String ips = ref.watch(ipsProvider);
     return Container(
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
@@ -26,7 +31,7 @@ class Achievement extends StatelessWidget {
 
               Row(
                 children: [
-                  Text('0.00'),
+                  Text(ipk.toString()),
                   SizedBox(
                     width: 4,
                   ),
@@ -41,7 +46,7 @@ class Achievement extends StatelessWidget {
               Text('IPS'),
               Row(
                 children: [
-                  Text('0.00'),
+                  Text(ips.toString()),
                   SizedBox(
                     width: 4,
                   ),
@@ -50,7 +55,9 @@ class Achievement extends StatelessWidget {
               ),
             ],
           ),
-          IconButton.filled(onPressed: () {}, icon: Icon(Icons.graphic_eq)),
+          IconButton.filled(onPressed: () {
+            context.go('/dashboard');
+          }, icon: Icon(Icons.bar_chart)),
         ],
       ),
     );
